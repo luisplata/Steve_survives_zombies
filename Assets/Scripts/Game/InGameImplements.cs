@@ -5,6 +5,7 @@ internal class InGameImplements : GameImplements
 {
     [SerializeField] private GameObject panel;
     [SerializeField] private Button pauseButton, gameOverButton;
+    [SerializeField] private PlayerMediator playerMediator;
     private bool _isGameOver, _isPause, _isGame;
     
     private void Start()
@@ -18,12 +19,19 @@ internal class InGameImplements : GameImplements
     {
         _isGame = false;
         _isPause = true;
+        SetMovement(_isGame);
+    }
+
+    private void SetMovement(bool isGame)
+    {
+        playerMediator.StartMove(isGame);
     }
 
     public void GameOver()
     {
         _isGameOver = true;
         _isGame = false;
+        SetMovement(_isGame);
     }
 
     public void UiForGame(bool can)
@@ -34,6 +42,7 @@ internal class InGameImplements : GameImplements
             _isPause = false;
             _isGame = true;
         }
+        SetMovement(_isGame);
         panel.SetActive(can);
     }
 

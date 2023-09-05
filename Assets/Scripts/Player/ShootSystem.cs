@@ -1,4 +1,5 @@
 using System;
+using Services;
 using UnityEngine;
 
 public class ShootSystem : MonoBehaviour
@@ -17,6 +18,7 @@ public class ShootSystem : MonoBehaviour
 
     private void Update()
     {
+        if(ServiceLocator.Instance.GetService<ILogicInGame>().IsPause()) return;
         if(gun == null || _target == null) return;
         if (gun.IsReadyForShoot(Time.deltaTime))
         {

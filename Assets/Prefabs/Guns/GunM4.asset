@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bbee5353ee4e60a6bbc1ff30762ea9, type: 3}
   m_Name: GunM4
   m_EditorClassIdentifier: 
-  cooldown: 7
+  cooldown: 2
   damage: 100
   radius: 7
   visualReference: {fileID: 1236257789494122, guid: 8b0b86b42def11849a8eba21f4a6a684, type: 3}

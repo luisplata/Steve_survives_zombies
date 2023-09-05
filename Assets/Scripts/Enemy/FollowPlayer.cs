@@ -14,6 +14,7 @@ public class FollowPlayer : MonoBehaviour
     {
         _inputCustom = new FacadeInputEnemy(gameObject);
         movementComponent.Config(_inputCustom);
+        movementComponent.StartMove(true);
     }
 
     private void OnTriggerEnter(Collider other)

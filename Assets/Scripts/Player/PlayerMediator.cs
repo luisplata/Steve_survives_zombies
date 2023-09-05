@@ -34,4 +34,9 @@ public class PlayerMediator : MonoBehaviour, IPlayerMediator
         if (forward == Vector3.zero) return transform.rotation;
         return Quaternion.LookRotation(forward);
     }
+
+    public void StartMove(bool isGame)
+    {
+        movementComponent.StartMove(isGame);
+    }
 }

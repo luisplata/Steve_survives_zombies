@@ -10,6 +10,15 @@ public class FacadeInputKeyboard : MonoBehaviour, IFacadeInput
     }
     public Vector2 GetDirection()
     {
-        return _direction;
+        var direction = new Vector2(0, 1);
+        if (_direction.x > 0)
+        {
+            direction.x = 1;
+        }
+        else if (_direction.x < 0)
+        {
+            direction.x = -1;
+        }
+        return direction;
     }
 }

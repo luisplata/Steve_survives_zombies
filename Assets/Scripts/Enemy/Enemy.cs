@@ -33,6 +33,8 @@ public class Enemy : MonoBehaviour, IEnemy
                 rigidbody.velocity = Vector3.zero;
                 rigidbody.isKinematic = true;
             }
+
+            Destroy(gameObject, 20);
         }
         return life.IsDead;
     }

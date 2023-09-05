@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bbee5353ee4e60a6bbc1ff30762ea9, type: 3}
   m_Name: FirstGun
   m_EditorClassIdentifier: 
-  cooldown: 5
+  cooldown: 1
   damage: 1
   radius: 5
   visualReference: {fileID: 1694449805434718, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
