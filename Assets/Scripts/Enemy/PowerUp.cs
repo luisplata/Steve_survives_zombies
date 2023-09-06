@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class PowerUp : MonoBehaviour, IEnemy, IPowerUp
+public abstract class PowerUp : MonoBehaviour, IEnemy, IPowerUp
 {
     [SerializeField] private float life;
-    [SerializeField] private Gun gun;
     private bool canBeTarget = true;
     public void CantBeTarget()
     {
@@ -23,14 +22,13 @@ public class PowerUp : MonoBehaviour, IEnemy, IPowerUp
         return life <= 0;
     }
 
+    public abstract void ApplyPowerUp(IFollower follower);
+
     private IEnumerator DestroyCustom()
     {
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 
-    public Gun GetGun()
-    {
-        return gun;
-    }
+    public abstract void Config(float factorDeAumento);
 }

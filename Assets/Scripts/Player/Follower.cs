@@ -8,7 +8,7 @@ internal class Follower: MonoBehaviour, IFollower
     [SerializeField] private ShootSystem shootSystem;
     [SerializeField] private SphereCollider sphereCollider;
     [SerializeField] private GameObject body, legs;
-    [SerializeField] private GameObject vfx_prefab;
+    [SerializeField] private GameObject vfxPrefab;
     private GameObject _pointOfFollowGo;
     private List<TargetComponent> _targets = new();
     private Gun _gun;
@@ -33,7 +33,7 @@ internal class Follower: MonoBehaviour, IFollower
 
     private void ShootVfx()
     {
-        var vfx = Instantiate(vfx_prefab, transform.position, Quaternion.identity, transform);
+        var vfx = Instantiate(vfxPrefab, transform.position, Quaternion.identity, transform);
         Destroy(vfx, 1);
     }
 
@@ -99,16 +99,26 @@ internal class Follower: MonoBehaviour, IFollower
         sphereCollider.radius = radius;        
     }
 
+    public IPlayerMediator GetPlayerMediator()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetGunForAllFollowers(Gun instantiateGun)
+    {
+        _playerMediator.SetGunForAllFollowers(instantiateGun);
+    }
+
+    public void AddOtherFollower(int followers)
+    {
+        _playerMediator.AddOtherFollower(followers);
+    }
+
     private void Reset()
     {
         sphereCollider = GetComponent<SphereCollider>();
     }
 
-    public Gun GetGun()
-    {
-        return _gun;
-    }
-    
     public void SetGun(Gun gun)
     {
         _gun = gun;

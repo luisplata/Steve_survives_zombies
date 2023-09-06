@@ -1,4 +1,4 @@
 ﻿public interface IPowerUp
 {
-    Gun GetGun();
+    void ApplyPowerUp(IFollower follower);
 }

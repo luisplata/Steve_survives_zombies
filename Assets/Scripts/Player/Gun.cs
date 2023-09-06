@@ -45,4 +45,9 @@ public class Gun : ScriptableObject
     {
         return soundOfShoot;
     }
+
+    public void Config(float factorDeAumento)
+    {
+        damage *= factorDeAumento;
+    }
 }

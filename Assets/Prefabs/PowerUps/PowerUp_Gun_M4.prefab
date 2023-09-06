@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 9222630854664275498}
   - component: {fileID: 6730456742844132021}
   - component: {fileID: 1178823340245115554}
-  - component: {fileID: 8550937666176932386}
   - component: {fileID: 6411738308103033162}
+  - component: {fileID: 4780121464123801662}
   m_Layer: 0
   m_Name: PowerUp_Gun_M4
   m_TagString: Untagged
@@ -82,21 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7dbece43539e5b4492d0bad4b2af0f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8550937666176932386}
---- !u!114 &8550937666176932386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6139712925422939893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc6eab67eab4f958cb23af7699bc715, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 1
-  gun: {fileID: 11400000, guid: c7f5287b93f215f4fb8fe3fb32fd5571, type: 2}
+  enemy: {fileID: 4780121464123801662}
 --- !u!54 &6411738308103033162
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,6 +110,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &4780121464123801662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6139712925422939893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aca5708c4ea456bbbca936f96d2a308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1
+  gun: {fileID: 11400000, guid: c7f5287b93f215f4fb8fe3fb32fd5571, type: 2}
 --- !u!1001 &2348478627369446151
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6730456742844132021}
   - component: {fileID: 1178823340245115554}
   - component: {fileID: 6411738308103033162}
-  - component: {fileID: 4084131399518048657}
+  - component: {fileID: 2887642215403601296}
   m_Layer: 0
-  m_Name: PowerUp_Gun_AK74
+  m_Name: PowerUp_AddFollower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7dbece43539e5b4492d0bad4b2af0f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 4084131399518048657}
+  enemy: {fileID: 2887642215403601296}
 --- !u!54 &6411738308103033162
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &4084131399518048657
+--- !u!114 &2887642215403601296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,11 +119,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6139712925422939893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aca5708c4ea456bbbca936f96d2a308, type: 3}
+  m_Script: {fileID: 11500000, guid: f67f5412010e4e5695fc46336efc92b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
-  gun: {fileID: 11400000, guid: 3c9833d7e09305440aacafd314803c8e, type: 2}
 --- !u!1001 &2348478627369446151
 PrefabInstance:
   m_ObjectHideFlags: 0

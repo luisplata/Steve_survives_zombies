@@ -35,6 +35,20 @@ public class PlayerMediator : MonoBehaviour, IPlayerMediator
         return Quaternion.LookRotation(forward);
     }
 
+    public void AddOtherFollower(int countOfFollowers)
+    {
+        if (countOfFollowers <= 0) countOfFollowers = 1;
+        for (var i = 0; i < countOfFollowers; i++)
+        {
+            spawnerOfFollowers.AddFollower();   
+        }
+    }
+
+    public void SetGunForAllFollowers(Gun instantiateGun)
+    {
+        spawnerOfFollowers.SetGunForAllFollowers(instantiateGun);
+    }
+
     public void StartMove(bool isGame)
     {
         movementComponent.StartMove(isGame);

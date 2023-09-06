@@ -28,10 +28,9 @@ public class ShootSystem : MonoBehaviour
                 //see if enemy have a interface 'IPowerUp'
                 if(_target.GetEnemy() is IPowerUp)
                 {
-                    var powerUp = _target.GetEnemy() as IPowerUp;
-                    var gun = powerUp.GetGun();
-                    SetGun(gun);
-                    OnPowerUpEvent?.Invoke(gun);
+                    //cast enemy to powerUp
+                    IPowerUp powerUp = (IPowerUp) _target.GetEnemy();
+                    powerUp.ApplyPowerUp(_follower);
                 }
             }
         }
@@ -56,6 +55,7 @@ public class ShootSystem : MonoBehaviour
             armAtOneHand.ConfigWeapon(gun.GetVisualWeapon());
         }
         _follower.SetRadius(gun.GetRadius());
+        OnPowerUpEvent?.Invoke(gun);
     }
 
     public void Config(IFollower follower)

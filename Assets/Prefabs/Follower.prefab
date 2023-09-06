@@ -912,7 +912,7 @@ MonoBehaviour:
   sphereCollider: {fileID: 3476126281389720873}
   body: {fileID: 3054008273303594209}
   legs: {fileID: 2890309576297753323}
-  vfx_prefab: {fileID: 3732551427800355369, guid: 3e2226b0718f88b40ad98d970390f416, type: 3}
+  vfxPrefab: {fileID: 3732551427800355369, guid: 3e2226b0718f88b40ad98d970390f416, type: 3}
 --- !u!135 &3476126281389720873
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -50,4 +50,13 @@ public class SpawnerOfFollowers : MonoBehaviour
     {
         _playerMediator = playerMediator;
     }
+
+    public void SetGunForAllFollowers(Gun instantiateGun)
+    {
+        
+        foreach (var follower in _followers)
+        {
+            follower.SetGun(instantiateGun);
+        }
+    }
 }

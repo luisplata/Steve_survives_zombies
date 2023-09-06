@@ -39,6 +39,11 @@ public class Enemy : MonoBehaviour, IEnemy
         return life.IsDead;
     }
 
+    public void ApplyPowerUp(IFollower follower)
+    {
+        throw new NotImplementedException();
+    }
+
     public void CantBeTarget()
     {
         canBeTarget = false;
